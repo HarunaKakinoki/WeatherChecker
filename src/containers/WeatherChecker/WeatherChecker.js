@@ -10,8 +10,8 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 class WeatherChecker extends Component {
     state = {
         key : API_KEY,
-        weatherURI :'http://dataservice.accuweather.com/currentconditions/v1/',
-        cityURI :'http://dataservice.accuweather.com/locations/v1/cities/search',
+        weatherURI :'https://dataservice.accuweather.com/currentconditions/v1/',
+        cityURI :'https://dataservice.accuweather.com/locations/v1/cities/search',
         cityInfo: [],
         weatherInfo: []
     }
