@@ -11,19 +11,19 @@ class Form extends React.Component {
         this.setState({
             userInput: this.refs.location.value
         }, ()=> {
+            console.log(this.state.userInput)
             this.props.fetchWeatherInfo(this.state.userInput)
         })
 
-         //Initialize text value.
+         //Clear text value.
         this.refs.location.value='';
-        
     }
 
     render () {
         return (
             <Aux>
-                <input type="text" placeholder="Type location..." ref="location"/>
-                <button type="submit" onClick={this.inputValueHandler}>Checked</button>
+                <input type="text" placeholder="Type city name..." ref="location"/>
+                <button type="submit" onClick={this.inputValueHandler}>Check</button>
             </Aux>
         );
     }
