@@ -4,10 +4,9 @@ import './Result.css';
 const result = (props) => (
    <div className="Result">
        <h2>{props.cityName}</h2>
-       <img className="TimeIcon" src={props.timeIcon} alt="time-icon" />
+       <img src={require(`../../assets/images/icons/${props.weatherIconNum}.svg`)} alt="weather icon" />
        <p>{props.weather}</p>
        <p>{props.temperature} &deg; C</p>
-       <img src={props.weatherIcon} alt="weather icon" />
    </div>
 );
 
