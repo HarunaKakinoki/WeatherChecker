@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Aux from '../hoc/Auxiliary';
 import Form from '../../components/Form/Form';
 import Result from '../../components/Result/Result';
 import axios from 'axios';
@@ -63,11 +62,11 @@ class WeatherChecker extends Component {
         }
 
         return (
-            <Aux>
+            <div>
                 <Form fetchWeatherInfo={this.getInfoForUpdate} />
                 {weatherInfo}
                 {errorMessage}
-            </Aux>
+            </div>
         );
     }
 }

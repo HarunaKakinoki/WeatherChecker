@@ -1,5 +1,4 @@
 import React from 'react';
-import Aux from '../../containers/hoc/Auxiliary';
 import './Form.css';
 
 class Form extends React.Component {
@@ -21,10 +20,10 @@ class Form extends React.Component {
 
     render () {
         return (
-            <Aux>
+            <div>
                 <input type="text" placeholder="Type city name..." ref="location"/>
                 <button type="submit" onClick={this.inputValueHandler}>Check</button>
-            </Aux>
+            </div>
         );
     }
 }
