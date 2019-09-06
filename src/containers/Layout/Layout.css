@@ -5,16 +5,17 @@ h1 {
 
 main {
     margin: 0 auto;
-    height: 400px;
+    height: 300px;
 }
 
 footer {
-    margin: 0;
-    height: 100px;
+    height: 70px;
+	width:100%;
+	position:absolute;
+	bottom:0;
 }
 
 .Default {
-    height: 600px;
-   
+    height: 500px;
 }
 

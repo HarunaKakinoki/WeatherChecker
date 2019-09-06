@@ -13,7 +13,7 @@ class WeatherChecker extends Component {
         cityURI :'https://dataservice.accuweather.com/locations/v1/cities/search',
         cityInfo: [],
         weatherInfo: [],
-        error: false
+        initialRender: true
     }
 
     //Return City & Weather information by accessing API.
@@ -50,8 +50,6 @@ class WeatherChecker extends Component {
     render () {
         let weatherInfo = null;
         let errorMessage = null;
-        console.log(this.state.cityInfo, 'city ')
-        console.log(this.state.weatherInfo, 'weather')
 
         //Check Infomation from API is fetched or not.
         if(this.state.cityInfo !== undefined && this.state.weatherInfo.length !== 0) {
@@ -62,15 +60,14 @@ class WeatherChecker extends Component {
                 weather={this.state.weatherInfo.WeatherText}
                 temperature={this.state.weatherInfo.Temperature.Metric.Value}
             />
-        } 
-
-        if(this.state.error) {
-            errorMessage = <p>The City name does not exist.</p>
+        } else if(this.state.cityInfo === undefined){
+            //Show error message.
+            errorMessage = <p>The City name does not exist</p>;
         }
-    
+
         return (
             <Aux>
-                <Form fetchWeatherInfo={this.getInfoForUpdate}/>
+                <Form fetchWeatherInfo={this.getInfoForUpdate} />
                 {weatherInfo}
                 {errorMessage}
             </Aux>
