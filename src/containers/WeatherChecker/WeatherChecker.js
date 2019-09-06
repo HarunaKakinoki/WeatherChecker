@@ -28,10 +28,7 @@ class WeatherChecker extends Component {
         })
         .then( response => this.setState({ cityInfo: response.data[0]})) //Get city info & set state.
         .then(() => this.getWeatherInfo(this.state.cityInfo.Key)) //Get weather info by city id & set state.
-        .catch(error => {
-            this.setState({ error: true}, ()=> console.log("ERROER Set"));
-            console.log(error);
-        });
+        .catch(error => console.log(error));
     }
 
     getWeatherInfo = (id) => {
