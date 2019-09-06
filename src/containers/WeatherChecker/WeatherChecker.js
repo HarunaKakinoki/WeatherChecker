@@ -4,7 +4,7 @@ import Form from '../../components/Form/Form';
 import Result from '../../components/Result/Result';
 import axios from 'axios';
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+//const API_KEY = process.env.REACT_APP_API_KEY;
 
 class WeatherChecker extends Component {
     state = {
